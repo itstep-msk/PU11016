@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	font-family: Arial;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.accordion {
+	margin-top: 1px;
+}
+
+.accordion__header {
+	background: #00c4ff;
+    color: #fff;
+    padding: 10px;
+}
+
+.accordion__content {
+	padding: 10px;
+    border: 1px solid;
+    display: none;
+}

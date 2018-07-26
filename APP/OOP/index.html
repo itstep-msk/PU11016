@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	function User(name) {
+
+		this.sayHi = function() {
+			console.log("Привет, я " + name)
+		};
+
+	}
+
+	var vasya = new User("Вася");
+
+	//vasya.sayHi();
+
+	function CoffeMachine(power, capacity) {
+		var waterAmount = 0;
+		var WATER_HEAT_CAPACITY = 4200;
+		var selfObj = this;
+
+		function getBoilTime() {
+			return 1000;
+		}
+
+		function onReady() {
+			console.log("Кофе готово!");
+		}
+		
+		this.run = function() {
+			if (waterAmount == 0) {
+				console.log("Отсутствует вода");
+				return;
+			}
+			setTimeout(onReady, getBoilTime())
+		}
+
+		this.setWaterAmount = function(amount) {
+			if (amount <= 0) {
+				console.log("Значение должно быть положительным");
+				return;
+			}
+			if (amount > capacity) {
+				console.log("Нельзя залить воды больше чем " + capacity);
+				return;
+			}
+
+			waterAmount = amount;
+		}
+
+		this.getWaterAmount = function() {
+			return waterAmount;
+		}
+	}
+
+	var coffeMachine = new CoffeMachine(1000, 10);
+	coffeMachine.setWaterAmount(2);
+	coffeMachine.run();
+</script>
+
+</body>
+</html>

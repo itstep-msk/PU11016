@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	font-family: Arial;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.tab-item {
+    display: inline-block;
+    background: #7bd4ff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.active {
+    background: #0090d7;
+}
+
+.content-item {
+    padding: 10px;
+    border: 1px solid #0090d7;
+    display: none;
+}
